@@ -17,6 +17,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - name: install dependencies
-      run: dotnet restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
+      run: nuget restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
     - name: publish
-      run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
+      run: nuget publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
