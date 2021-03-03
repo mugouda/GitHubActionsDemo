@@ -4,12 +4,6 @@ name: Publish
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-#  push:
-#    branches: [ main ]
-#  pull_request:
-#    branches: [ main ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -22,7 +16,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: .NET Core CLI
-      # You may pin to the exact commit or the version.
-      # uses: baruchiro/github-actions@cfa460ee18f07031ba85ff00d2184fabf03f9f1f
-      uses: baruchiro/github-actions@0.0.1
+    - name: install dependencies
+      run: dotnet restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
+    - name: publish
+      run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
