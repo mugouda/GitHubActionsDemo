@@ -22,11 +22,9 @@ jobs:
       run: dotnet restore ${{ secrets.SOURCE }} #"C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
     - name: Build
       run: dotnet build --no-restore
-#    - name: Test
-#      run: dotnet test --no-build --verbosity normal
     - name: stop app
-      run: powershell  ${{ secrets.SCRIPTS }}-"stopserver.ps1"
+      run: powershell ${{ secrets.STOP_SCRIPT }} #"C:\Utils\stopserver.ps1"
     - name: publish
       run: dotnet publish ${{ secrets.SOURCE }} -o ${{ secrets.PUBLISH_PATH }} #"C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
     - name: start app
-      run: powershell "C:\Utils\startserver.ps1"
+      run: powershell ${{ secrets.START_SCRIPT }} #"C:\Utils\startserver.ps1"
