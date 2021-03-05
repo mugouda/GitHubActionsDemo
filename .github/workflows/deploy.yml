@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install dependencies
-      run: dotnet restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
+      run: dotnet restore ${{ secrets.SOURCE }} #"C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
     - name: Build
       run: dotnet build --no-restore
 #    - name: Test
