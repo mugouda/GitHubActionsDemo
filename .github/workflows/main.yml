@@ -4,6 +4,7 @@ name: Publish
 
 # Controls when the action will run. 
 on:
+  push:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -19,4 +20,4 @@ jobs:
     - name: install dependencies
       run: dotnet restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
     - name: publish
-      run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
+      run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
