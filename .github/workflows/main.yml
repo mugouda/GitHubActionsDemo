@@ -20,8 +20,6 @@ jobs:
     - name: install dependencies
       run: dotnet restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
     - name: stop app
-      run: powershell iisreset
+      run: powershell "C:\Utils\restartserver.ps1"
     - name: publish
       run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
-    - name: start app
-      run: powershell iisreset
