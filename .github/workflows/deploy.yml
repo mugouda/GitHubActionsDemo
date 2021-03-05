@@ -27,6 +27,6 @@ jobs:
     - name: stop app
       run: powershell  ${{ secrets.SCRIPTS }} + "stopserver.ps1"
     - name: publish
-      run: dotnet publish ${{ secrets.SOURCE }} -o ${{ PUBLISH_PATH }} #"C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
+      run: dotnet publish ${{ secrets.SOURCE }} -o ${{ secrets.PUBLISH_PATH }} #"C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
     - name: start app
       run: powershell "C:\Utils\startserver.ps1"
