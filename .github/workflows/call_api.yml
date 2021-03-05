@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Call API
-        run: Invoke-Webrequest -Headers @{'Accept' = 'application/json'; 'ontent-Type' = 'application/json'; 'x-rapidapi-key' = 'dc1dfc1c3fmsh4b6f2a2722a84c2p156bf9jsn2fa8d7b6b4d1'} https://google-translate1.p.rapidapi.com/language/translate/v2/languages  UseBasicParsing 
+        run: Invoke-Webrequest -Headers @{'Accept' = 'application/json'; 'ontent-Type' = 'application/json'; 'x-rapidapi-key' = 'dc1dfc1c3fmsh4b6f2a2722a84c2p156bf9jsn2fa8d7b6b4d1'} https://google-translate1.p.rapidapi.com/language/translate/v2/languages  -UseBasicParsing 
       
         
         
