@@ -1,0 +1,11 @@
+name: Call API
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call_api:
+    runs-on: self-hosted
+    steps:
+      - name: Call API
+        run: curl -i -H ${{ secrets.HEADER1 }} -H ${{ secrets.HEADER2 }} -H ${{ secrets.APIKEY }} https://google-translate1.p.rapidapi.com/language/translate/v2/languages
