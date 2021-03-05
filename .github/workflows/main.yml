@@ -19,5 +19,9 @@ jobs:
     steps:
     - name: install dependencies
       run: dotnet restore "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln"
+    - name: stop app
+      run: iisreset -stop
     - name: publish
       run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
+    - name: start app
+      run: iisreset -start
