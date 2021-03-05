@@ -7,6 +7,8 @@ jobs:
   call_api:
     runs-on: self-hosted
     steps:
+      - name: Run CMD
+        run: cmd 
       - name: Call API
-        run: cmd curl -i -H ${{ secrets.HEADER1 }} -H ${{ secrets.HEADER2 }} -H ${{ secrets.APIKEY }} https://google-translate1.p.rapidapi.com/language/translate/v2/languages
+        run: curl -i -H ${{ secrets.HEADER1 }} -H ${{ secrets.HEADER2 }} -H ${{ secrets.APIKEY }} https://google-translate1.p.rapidapi.com/language/translate/v2/languages
         
