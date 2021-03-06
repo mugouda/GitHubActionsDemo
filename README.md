@@ -1,4 +1,4 @@
-# GitHubActionsDemo
+# GitHub Actions in Action
 
 - Hello World Action 
 - Workflow Logs
