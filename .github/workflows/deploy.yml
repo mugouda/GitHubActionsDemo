@@ -13,7 +13,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: stop app
-      run: powershell "C:\Utils\stopserver.ps1"
+      run: iisreset /stop
     - name: publish
       run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
     - name: start app
