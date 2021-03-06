@@ -22,4 +22,4 @@ jobs:
           echo test, and deploy your project.
           
       - name: Run custom console application
-        run: ConsoleApp1
+        run: ConsoleApp1.exe
