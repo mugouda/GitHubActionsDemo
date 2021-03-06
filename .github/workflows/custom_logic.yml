@@ -1,6 +1,10 @@
 name: Custom Logic
+#show multiline comments
+#line 1
+#line 2
 
-on:
+on: 
+  #show different triggers 
   workflow_dispatch:    
     inputs:
       logLevel:
@@ -9,8 +13,8 @@ on:
         default: 'XIII'
         
 jobs:
-  Job1:
-    runs-on:  ubuntu-latest
+  Job1: #runs on GitHub hosted runner
+    runs-on:  ubuntu-latest 
     
     steps:
 
@@ -22,7 +26,7 @@ jobs:
           echo Add other actions to build,
           echo "EMEA DevDay: ${{ github.event.inputs.logLevel }}"
           
-  Job2:
+  Job2: #runs on self-hosted runner
     runs-on: self-hosted
     
     steps:
