@@ -23,5 +23,6 @@ jobs:
           
       - name: Run custom console application
         run: ConsoleApp1.exe
-      - name: IIS Reset
-        run: iisreset
+        
+      - name: Run Powershell script
+        run: "c:\\utils\\ps_demo.ps1"
