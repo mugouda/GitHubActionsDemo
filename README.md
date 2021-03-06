@@ -10,10 +10,11 @@
    - Comments
    - Logs
 - Marketplace
+   - Marketplace on GHES (GitHub Connect) 
 - Artifacts
 - Runners (GitHub-Hosted vs Self-Hosted)
    - Create a runner
-   - Runner levels
+   - Runner levels (GHES => Enterprise Level)
    - Runner tags
    - Runner as a service (service permissions)
 - Run custom logic 
@@ -23,4 +24,5 @@
    - Webhooks
 - Automation scenario 
 - Environments and Secrets
+   - Environments on GHES 
 
