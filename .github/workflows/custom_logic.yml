@@ -9,9 +9,9 @@ on:
         default: 'XIII'
         
 jobs:
-  build:
-    runs-on: self-hosted
-
+  Job1:
+    runs-on:  ubuntu-latest
+    
     steps:
 
       - name: Run a one-line script
@@ -22,6 +22,10 @@ jobs:
           echo Add other actions to build,
           echo "EMEA DevDay: ${{ github.event.inputs.logLevel }}"
           
+  Job2:
+    runs-on: self-hosted
+    
+    steps:
       - name: Run custom console application
         run: ConsoleApp1
         
