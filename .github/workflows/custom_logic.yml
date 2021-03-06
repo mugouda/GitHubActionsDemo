@@ -1,8 +1,13 @@
 name: Custom Logic
 
 on:
-  workflow_dispatch:
-  
+  workflow_dispatch:    
+    inputs:
+      logLevel:
+        description: 'Event Serial'     
+        required: true
+        default: 'XIII'
+        
 jobs:
   build:
     runs-on: self-hosted
@@ -15,7 +20,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-          echo test, and deploy your project.
+          echo "EMEA DevDay: ${{ github.event.inputs.logLevel }}"
           
       - name: Run custom console application
         run: ConsoleApp1
