@@ -8,25 +8,28 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
 
-      # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           
       - name: Run custom console application
-        run: ConsoleApp1.exe
+        run: ConsoleApp1
         
       - name: Run Powershell script
         run: "c:\\utils\\ps_demo.ps1"
         
       - name: Call API
-        run: Invoke-Webrequest -Headers @{'Accept' = 'application/json'; 'ontent-Type' = 'application/json'; 'x-rapidapi-key' = 'dc1dfc1c3fmsh4b6f2a2722a84c2p156bf9jsn2fa8d7b6b4d1'} https://google-translate1.p.rapidapi.com/language/translate/v2/languages  -UseBasicParsing 
+        run: | 
+          Invoke-Webrequest -Headers @{
+            'Accept' = 'application/json'; 
+            'ontent-Type' = 'application/json'; 
+            'x-rapidapi-key' = 'dc1dfc1c3fmsh4b6f2a2722a84c2p156bf9jsn2fa8d7b6b4d1'
+          } 
+          https://google-translate1.p.rapidapi.com/language/translate/v2/languages  
+          -UseBasicParsing 
       
