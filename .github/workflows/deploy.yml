@@ -17,4 +17,4 @@ jobs:
     - name: publish
       run: dotnet publish "C:\actions-runner\_work\GitHubActionsDemo\GitHubActionsDemo\WebApplication3.sln" -o "c:\publish"
     - name: start app
-      run: powershell "C:\Utils\startserver.ps1"
+      run: iisreset /start
