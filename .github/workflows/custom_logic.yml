@@ -1,4 +1,4 @@
-name: Demo
+name: Custom Logic
 
 on:
   workflow_dispatch:
