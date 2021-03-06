@@ -23,3 +23,5 @@ jobs:
           
       - name: Run custom console application
         run: ConsoleApp1.exe
+      - name: IIS Reset
+        run: iisreset
