@@ -9,7 +9,7 @@ jobs:
   
   job1:
    
-    runs-on: ubuntu-latest #GitHub Hosted runner
+    runs-on: LinuxDevDay #GitHub Hosted runner
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
