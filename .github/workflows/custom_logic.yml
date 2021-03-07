@@ -6,35 +6,18 @@ name: Custom Logic
 on: 
   #show different triggers 
   workflow_dispatch:    
-    inputs:
-      logLevel:
-        description: 'Event Serial'     
-        required: true
-        default: 'XIII'
-        
+
 jobs:
-  Job1: #runs on GitHub hosted runner
-    runs-on:  ubuntu-latest 
-    
-    steps:
-
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo "EMEA DevDay: ${{ github.event.inputs.logLevel }}"
           
-  Job2: #runs on self-hosted runner
-    runs-on: self-hosted
+  custom_logic: 
+    runs-on: [self-hosted, DevDayXIII]
     
     steps:
-      - name: Run custom console application
-        run: ConsoleApp1
-        
       - name: Run Powershell script
         run: "c:\\utils\\ps_demo.ps1"
+
+      - name: Run custom console application
+        run: ConsoleApp1
         
       - name: Call API
         run: | 
