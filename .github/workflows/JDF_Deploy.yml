@@ -23,7 +23,7 @@ jobs:
         run: echo Deploying Agility Kit
 
   job_3:
-    if: 1=0
+    if: 1==0
     name: Deploy Analytics Kit
     needs: job_1
     runs-on: macOS-latest
